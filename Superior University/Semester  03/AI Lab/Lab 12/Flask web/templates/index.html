@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SVC Classifier</title>
+</head>
+<body>
+    <h2>Support Vector Classifier (SVC)</h2>
+    <form action="/predict" method="post">
+        <label>Enter feature values (comma-separated):</label><br>
+        <input type="text" name="features" placeholder="e.g., 5.1,3.5,1.4,0.2" required><br><br>
+
+        <label>True label (optional, for accuracy):</label><br>
+        <input type="number" name="true_label" placeholder="e.g., 0" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+        <p>{{ accuracy_text }}</p>
+    {% endif %}
+</body>
+</html>
