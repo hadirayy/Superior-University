@@ -1,0 +1,2 @@
+Download pip python 3
+install pandas, numpy , sk-learn 
