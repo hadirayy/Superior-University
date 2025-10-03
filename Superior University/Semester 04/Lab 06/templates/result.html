@@ -1,0 +1,21 @@
+<!-- templates/result.html -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Result</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-4">
+  <div class="container">
+    <h1>Processed Video</h1>
+    <p class="mb-3">Download or view the processed video below.</p>
+
+    <video controls style="max-width:100%" src="{{ url_for('get_result', filename=output_video) }}"></video>
+    <div class="mt-3">
+      <a href="{{ url_for('get_result', filename=output_video) }}" class="btn btn-success">Download</a>
+      <a href="{{ url_for('index') }}" class="btn btn-secondary">Process another</a>
+    </div>
+  </div>
+</body>
+</html>
