@@ -1,0 +1,3 @@
+N_Queen problems
+put the queen on thats position where they are not in any queen range
+solution in code file
